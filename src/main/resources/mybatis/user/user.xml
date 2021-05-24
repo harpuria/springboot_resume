@@ -2,7 +2,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.yhh.resume.web.user.UserMapper">
-	<select id="userOneSelect" parameterType="UserDto" resultType="UserDto">
+	<select id="login" parameterType="UserDto" resultType="UserDto">
 		SELECT * FROM USERS WHERE username = #{username} AND password = #{password}
 	</select>
+	
+	<insert id="singin" parameterType="UserDto">
+		INSERT INTO USERS (username, password, role)
+		VALUES (#{username}, #{password}, 'tester')
+	</insert>
 </mapper>

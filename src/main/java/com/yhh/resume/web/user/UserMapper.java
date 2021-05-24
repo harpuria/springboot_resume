@@ -6,5 +6,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 @Mapper
 public interface UserMapper {
-	void login(UserDto dto);
+	UserDto login(UserDto dto);
+	void singin(UserDto dto);
 }
