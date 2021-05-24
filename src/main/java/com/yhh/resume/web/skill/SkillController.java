@@ -27,4 +27,9 @@ public class SkillController {
 	public void skillDelete(@RequestBody SkillDto dto) throws Exception{
 		service.skillDelete(dto);
 	}
+	
+	@PostMapping("/skillUpdate")
+	public void skillUpdate(@RequestBody SkillDto dto) throws Exception{
+		service.skillUpdate(dto);
+	}
 }

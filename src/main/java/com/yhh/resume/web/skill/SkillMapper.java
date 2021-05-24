@@ -11,4 +11,5 @@ public interface SkillMapper {
 	List<SkillDto> skillAllSelect();
 	void skillInsert(SkillDto dto);
 	void skillDelete(SkillDto dto);
+	void skillUpdate(SkillDto dto);
 }

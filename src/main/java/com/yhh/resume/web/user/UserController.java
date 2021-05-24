@@ -11,7 +11,7 @@ public class UserController {
 	UserService service;
 	
 	@GetMapping("/login")
-	public String login(@RequestBody UserDto dto) throws Exception{
+	public String login(UserDto dto) throws Exception{
 		service.login(dto);
 		return "";
 	}

@@ -22,4 +22,8 @@ public class SkillService {
 	public void skillDelete(SkillDto dto) {
 		mapper.skillDelete(dto);
 	}
+	
+	public void skillUpdate(SkillDto dto) {
+		mapper.skillUpdate(dto);
+	}
 }

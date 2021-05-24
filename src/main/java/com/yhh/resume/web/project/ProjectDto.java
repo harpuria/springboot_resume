@@ -7,8 +7,8 @@ public class ProjectDto {
 	String company;
 	String tech;
 	String imagePath;
+	String role;
 	
-
 	public Long getId() {
 		return id;
 	}
@@ -44,5 +44,11 @@ public class ProjectDto {
 	}
 	public void setImagePath(String imagePath) {
 		this.imagePath = imagePath;
-	}	
+	}
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
+	}
 }

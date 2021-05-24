@@ -3,7 +3,7 @@
 
 <mapper namespace="com.yhh.resume.web.skill.SkillMapper">
 	<select id="skillAllSelect" resultType="SkillDto">
-		SELECT * FROM SKILL
+		SELECT * FROM SKILL ORDER BY id
 	</select>
 	
 	<insert id="skillInsert" parameterType="SkillDto">
@@ -15,4 +15,8 @@
 	<delete id="skillDelete" parameterType="SkillDto">
 		DELETE FROM SKILL WHERE id = #{id}
 	</delete>
+	
+	<update id="skillUpdate" parameterType="SkillDto">
+		UPDATE SKILL SET name = #{name}, content = #{content}, exp = #{exp} WHERE id = #{id}
+	</update>
 </mapper>

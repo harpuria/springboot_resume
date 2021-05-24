@@ -3,6 +3,27 @@
 
 <mapper namespace="com.yhh.resume.web.project.ProjectMapper">
 	<select id="projectAllSelect" resultType="ProjectDto">
-		SELECT * FROM PROJECT
+		SELECT * FROM PROJECT ORDER BY id
 	</select>
+	
+	<insert id="projectInsert" parameterType="ProjectDto">
+		INSERT INTO 
+		PROJECT (name, period, company, role, tech, imagePath) 
+		VALUES(#{name}, #{period}, #{company}, #{role}, #{tech}, #{imagePath})
+	</insert>
+	
+	<delete id="projectDelete" parameterType="ProjectDto">
+		DELETE FROM PROJECT WHERE id = #{id}
+	</delete>
+	
+	<update id="projectUpdate" parameterType="ProjectDto">
+		UPDATE PROJECT SET 
+			name = #{name}, 
+			period = #{period}, 
+			company = #{company},
+			role = #{role},
+			tech = #{tech},
+			imagePath = #{imagePath}
+		WHERE id = #{id}
+	</update>
 </mapper>
